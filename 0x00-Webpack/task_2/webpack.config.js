@@ -17,8 +17,22 @@ module.exports = {
         'style-loader',
       'css-loader'
     ],
-      }
+      },
+    {
+      test: /.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/i,
+      use: [
+        "file-loader",
+        {
+          loader: "image-webpack-loader",
+          options: {
+            bypassOnDebug: true,
+            disable: true,
+          },
+        },
+      ],
+    }
   ],
+
   // we can define ohter rules here
   },
 };
