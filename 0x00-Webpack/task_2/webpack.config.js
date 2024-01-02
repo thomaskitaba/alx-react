@@ -9,4 +9,16 @@ module.exports = {
     path: path.resolve(__dirname, 'public'),
     filename: 'bundle.js',
   },
+  module: {
+    rules: [
+      {
+      test: /\.css$/,
+      use: [
+        'style-loader',
+      'css-loader'
+    ],
+      }
+  ],
+  // we can define ohter rules here
+  },
 };
