@@ -4,13 +4,11 @@
 .App {
   height: auto;
   margin: 0;
-
 }
 body {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 1.2rem;
 }
-
 .App-header {
   display: flex;
   height: 200px;
