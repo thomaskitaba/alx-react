@@ -10,5 +10,3 @@ it('renders without crashing', () => {
 it('renders footer', () => {
   expect(wrapper.find('footer.footer').exists()).toEqual(true);
 });
-// const wrapper = shallow(<Footer />);
-// expect(wrapper.text()).toContain('Copyright');
