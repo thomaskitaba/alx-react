@@ -7,5 +7,4 @@ Object.defineProperty(global, 'TextEncoder', {
   value: util.TextEncoder,
 });
 
-
 Enzyme.configure({ adapter: new Adapter() });
