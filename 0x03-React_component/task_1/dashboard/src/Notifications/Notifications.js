@@ -16,6 +16,9 @@ class Notifications extends Component {
     listNotifications: PropTypes.arrayOf(NotificationItemShape),
   };
 
+  static markAsRead = (number) => {
+    console.log(`Notification ${number} has been marked as read`);
+  }
   render () {
     const { displayDrawer, listNotifications } = this.props;
     return (
