@@ -18,7 +18,6 @@
     "@babel/preset-env": "^7.12.16",
     "@babel/preset-react": "^7.12.13",
     "@cfaester/enzyme-adapter-react-18": "^0.7.1",
-    "@types/enzyme": "^3.10.18",
     "@types/prop-types": "^15.7.11",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.2",
