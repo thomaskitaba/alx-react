@@ -6,6 +6,8 @@ import Notifications from '../Notifications/Notifications';
 import CourseList from '../CourseList/CourseList';
 import PropTypes from 'prop-types';
 import { getLatestNotification } from '../utils/utils';
+import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
+import BodySection from '../BodySection/BodySection';
 
 const listCourses = [
   { id: 1, name: 'ES6', credit: 60 },
@@ -30,6 +32,15 @@ class App extends Component {
       this.props.logout();
     }
   }
+  static defaultProps = {
+    isLoggedIn: false,
+    logout: () => {},
+  };
+
+  static propTypes = {
+    isLoggedIn: PropTypes.bool,
+    logout: PropTypes.func,
+  };
 
   componentDidMount() {
     window.addEventListener('keydown', this.handleLogout);
@@ -43,21 +54,12 @@ class App extends Component {
       <Fragment>
         <Notifications listNotifications={listNotifications} />
         <Header />
-        {isLoggedIn ? <CourseList listCourses={listCourses} /> : <Login />}
+        {isLoggedIn ? (<BodySectionWithMarginBottom title='Course list'> <CourseList listCourses={listCourses} />
+        </BodySectionWithMarginBottom> ) : (<BodySectionWithMarginBottom><Login /></BodySectionWithMarginBottom>)}
         <Footer />
       </Fragment>
     );
   }
 }
-
-App.defaultProps = {
-  isLoggedIn: false,
-  logout: () => {},
-};
-
-App.propTypes = {
-  isLoggedIn: PropTypes.bool,
-  logout: PropTypes.func,
-};
 
 export default App;
