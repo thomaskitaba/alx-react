@@ -1,11 +1,4 @@
-import Enzyme from 'enzyme';
-import Adapter from '@cfaester/enzyme-adapter-react-18';
-// setupTests.js
-import util from 'util';
+import { configure } from "enzyme";
+import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 
-Object.defineProperty(global, 'TextEncoder', {
-  value: util.TextEncoder,
-});
-
-
-Enzyme.configure({ adapter: new Adapter() });
+configure({ adapter: new Adapter() });
