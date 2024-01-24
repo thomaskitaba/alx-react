@@ -1,5 +1,4 @@
 import { seq } from 'immutable';
-// const seq = require('immutable.seq');
 function printBestStudents(obj) {
   const seq = seq(obj);
   const filtered = seq.filter((stud) => {
@@ -15,9 +14,6 @@ function printBestStudents(obj) {
   // });
   // console.log(ansObj);
 }
-
-
-
 // const grades = {
 //   1: {
 //     score: 99,
