@@ -1,6 +1,7 @@
 import { Seq } from 'immutable';
-function printBestStudents(obj) {
-  const seq = Seq(obj);
+
+export default function printBestStudents(object) {
+  const seq = Seq(object);
   const filtered = seq.filter((stud) => {
     stud.firstName.charAt(0).toUpperCase() + stud.firstName.slice(1);
     stud.lastName.charAt(0).toUpperCase() + stud.lastName.slice(1);
